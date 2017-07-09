@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Comments</h1>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ comment.id }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ comment.content }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="{{ path('comments_index') }}">Back to the list</a>
+        </li>
+        <li class="list-group-item">
+            <a href="{{ path('comments_edit', { 'id': comment.id }) }}">Edit</a>
+        </li>
+        <li class="list-group-item">
+            {{ form_start(delete_form) }}
+                <input type="submit" class="btn btn-danger" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

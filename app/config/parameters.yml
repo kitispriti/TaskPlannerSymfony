@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: TaskPlanner
+    database_user: root
+    database_password: coderslab
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: localhost
+    mailer_password: null
+    secret: cfff6f2a476797f8f9e6e6a955266c2afc076219

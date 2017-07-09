@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Task edit</h1>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+    <li class="list-group-item">
+        <input type="submit" class="btn btn-success" value="Edit">
+    </li>
+    {{ form_end(edit_form) }}
+
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="{{ path('task_index') }}" class="btn btn-info" role="button">Back to the list</a>
+        </li>
+        <li class="list-group-item">
+            {{ form_start(delete_form) }}
+            <input type="submit" class="btn btn-danger" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
